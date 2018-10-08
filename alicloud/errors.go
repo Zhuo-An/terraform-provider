@@ -213,8 +213,16 @@ const (
 	ForbiddenRelease                 = "Forbidden.Release"
 	InvalidCenBandwidthLimitsNotZero = "InvalidOperation.CenBandwidthLimitsNotZero"
 	ParameterBwpInstanceId           = "ParameterBwpInstanceId"
+	InvalidBwpInstanceStatus         = "InvalidOperation.BwpInstanceStatus"
+	InvalidBwpBusinessStatus         = "InvalidOperation.BwpBusinessStatus"
 	// kv-store
 	InvalidKVStoreInstanceIdNotFound = "InvalidInstanceId.NotFound"
+	// MNS
+	QueueNotExist        = "QueueNotExist"
+	TopicNotExist        = "TopicNotExist"
+	SubscriptionNotExist = "SubscriptionNotExist"
+	//HaVip
+	InvalidHaVipIdNotFound = "InvalidHaVipId.NotFound"
 )
 
 var SlbIsBusy = []string{"SystemBusy", "OperationBusy", "ServiceIsStopping", "BackendServer.configuring", "ServiceIsConfiguring"}
@@ -246,7 +254,6 @@ func GetNotFoundErrorFromString(str string) error {
 		message:   str,
 	}
 }
-
 func NotFoundError(err error) bool {
 	if e, ok := err.(*common.Error); ok &&
 		(e.Code == InstanceNotFound || e.Code == RamInstanceNotFound || e.Code == NotFound ||

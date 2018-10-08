@@ -90,6 +90,11 @@ const (
 	InService      = Status("InService")
 	Removing       = Status("Removing")
 	DisabledStatus = Status("Disabled")
+
+	Init            = Status("Init")
+	Provisioning    = Status("Provisioning")
+	Updating        = Status("Updating")
+	FinancialLocked = Status("FinancialLocked")
 )
 
 type IPType string
@@ -337,6 +342,7 @@ const (
 	STSCode     = ServiceCode("STS")
 	CENCode     = ServiceCode("CEN")
 	KVSTORECode = ServiceCode("KVSTORE")
+	MNSCode     = ServiceCode("MNS")
 )
 
 //xml

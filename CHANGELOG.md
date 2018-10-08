@@ -1,4 +1,16 @@
 ## 1.18.0 (Unreleased)
+
+IMPROVEMENTS:
+
+- Improve WaitForRouteTable and WaitForRouteTableAttachment method [GH-375]
+- Correct Function Compute conn [GH-371]
+- Improve datasource `images`'s docs [GH-370]
+
+BUG FIXES:
+
+- Add parameter 'force_delete' to support deleting 'PrePaid' instance [GH-377]
+- Add wait time to fix random detaching disk error [GH-373]
+
 ## 1.17.0 (September 22, 2018)
 
 FEATURES:

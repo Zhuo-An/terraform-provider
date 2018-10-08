@@ -33,6 +33,8 @@ The following arguments are supported:
 * `owners` - (Optional) Filter results by image owner. Valid items are `system`, `self`, `others`, `marketplace`.
 * `output_file` - (Optional) Set the name of the file where data source results will be saved after running `terraform plan`.
 
+-> **NOTE:** At least one of the `name_regex`, `most_recent` and `owners` must be set.
+
 ## Attributes Reference
 
 The following attributes are returned in addition to the arguments listed above:
